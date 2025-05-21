@@ -91,14 +91,9 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
           <a
             href="#contact"
-            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border font-Ovo border-gray-500 rounded-full ml-4 "
+            className="hidden lg:flex items-center gap-3 px-10 py-2.5 border font-Ovo border-gray-500 rounded-full ml-4 dark:border-white/50"
           >
-            Contact{" "}
-            <Image
-              alt=""
-              src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon}
-              className="w-3"
-            />
+            Contact <Image alt="" src={assets.arrow_icon} className="w-3" />
           </a>
 
           <button onClick={openMenu} className="block md:hidden ml-3">
@@ -113,7 +108,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         {/* mobile menu */}
         <ul
           ref={sideMenuRef}
-          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 dark:bg-darkHiver dark:text-white"
+          className="flex md:hidden text-black flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 "
         >
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <Image
